@@ -21,5 +21,5 @@ RUN cd /opt/refinitiv/Elektron-SDK \
  && make \
  && cp /opt/refinitiv/Elektron-SDK/Cpp-C/etc/* /opt/refinitiv/Elektron-SDK/Cpp-C/Eta/Executables/OL7_64*/Optimized \
  && ln -s /opt/refinitiv/Elektron-SDK/Cpp-C/Eta/Executables/OL7_64* /opt/refinitiv/Elektron-SDK/Cpp-C/Eta/Executables/OL7_64
-WORKDIR /opt/refinitiv/Elektron-SDK/Cpp-C/Eta/Executables/OL7_64/Optimized
+WORKDIR /opt/refinitiv/Elektron-SDK/Cpp-C
 CMD /bin/sh
