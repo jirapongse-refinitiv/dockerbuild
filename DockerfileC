@@ -18,9 +18,7 @@ RUN yum -y install gcc-c++.x86_64 git.x86_64 ksh redhat-lsb-core.x86_64 openssl-
  && mkdir -p external/dlcache \
  && cp /opt/refinitiv/libxml2-2.9.9.tar.gz external/dlcache \
  && cmake ../ -DBUILD_UNIT_TESTS=OFF \
- && make \
- && cp /opt/refinitiv/Elektron-SDK/Cpp-C/etc/* /opt/refinitiv/Elektron-SDK/Cpp-C/Eta/Executables/OL7_64*/Optimized \
- && ln -s /opt/refinitiv/Elektron-SDK/Cpp-C/Eta/Executables/OL7_64* /opt/refinitiv/Elektron-SDK/Cpp-C/Eta/Executables/OL7_64
+ && make 
 ENV PATH="/opt/refinitiv/cmake-3.11.2-Linux-x86_64/bin:$PATH"
 WORKDIR /opt/refinitiv/Elektron-SDK/Cpp-C
 CMD /bin/sh
