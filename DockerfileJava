@@ -1,13 +1,12 @@
 FROM oraclelinux:7
-LABEL maintainer="Refinitiv Active Help Service"
+LABEL maintainer="Refinitiv Developer Advocate"
 RUN yum -y install java-1.8.0-openjdk-devel git.x86_64 unzip \
  && mkdir -p /opt/refinitiv \
  && cd /opt/refinitiv \
  && export JAVA_HOME=/usr \
- && git clone --recursive https://github.com/refinitiv/Elektron-SDK.git \
- && cd Elektron-SDK/Java \
+ && git clone --recursive https://github.com/refinitiv/Real-Time-SDK.git \
+ && cd Real-Time-SDK/Java \
  && ./gradlew jar
-WORKDIR /opt/refinitiv/Elektron-SDK/Java
+WORKDIR /opt/refinitiv/Real-Time-SDK/Java
 ENV JAVA_HOME=/usr
 CMD /bin/sh
-
