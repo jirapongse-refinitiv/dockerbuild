@@ -1,6 +1,6 @@
 FROM oraclelinux:7
 LABEL maintainer="Refinitiv Developer Advocate"
-RUN yum -y install java-1.8.0-openjdk-devel git.x86_64 unzip wget\
+RUN yum -y install java-11-openjdk git.x86_64 unzip wget\
  && mkdir -p /opt/refinitiv \
  && cd /opt/refinitiv \
  && export JAVA_HOME=/usr \
