@@ -14,7 +14,7 @@ RUN yum -y install gcc-c++.x86_64 git.x86_64 ksh redhat-lsb-core.x86_64 openssl-
  && export PATH=/opt/refinitiv/cmake-3.11.2-Linux-x86_64/bin:$PATH \
  && cd rtsdk \
  && mkdir -p external/dlcache \
- && cp /opt/refinitiv/libxml2-2.9.9.tar.gz external/dlcache \
+ && cp /opt/refinitiv/libxml2-2.9.12.tar.gz external/dlcache \
  && cmake ../ -DBUILD_UNIT_TESTS=OFF \
  && make 
 ENV PATH="/opt/refinitiv/cmake-3.11.2-Linux-x86_64/bin:$PATH"
