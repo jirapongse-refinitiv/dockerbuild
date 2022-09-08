@@ -1,1 +1,8 @@
-Test
+docker build -t refinitivrealtime/realtimesdk_c https://github.com/jirapongse-refinitiv/dockerbuild/raw/master/DockerfileC
+docker image tag refinitivrealtime/realtimesdk_c:latest refinitivapis/realtimesdk_c:latest
+
+docker build -t refinitivrealtime/realtimesdk_java https://github.com/jirapongse-refinitiv/dockerbuild/raw/master/DockerfileJava
+docker image tag refinitivrealtime/realtimesdk_java:latest refinitivapis/realtimesdk_java:latest
+
+docker build -t refinitivrealtime/websocket_api https://github.com/jirapongse-refinitiv/dockerbuild_websocket/raw/master/Dockerfile
+docker image tag refinitivrealtime/websocket_api:latest refinitivapis/websocket_api:latest
