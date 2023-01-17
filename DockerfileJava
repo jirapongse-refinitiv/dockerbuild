@@ -8,8 +8,8 @@ RUN yum -y install java-11-openjdk git.x86_64 unzip wget\
  && git config --global http.sslVerify false \
  && git clone --recursive https://github.com/refinitiv/Real-Time-SDK.git \
  && cd Real-Time-SDK \
- && wget --no-check-certificate https://github.com/Refinitiv/Real-Time-SDK/releases/download/Real-Time-SDK-2.0.6.L1/RTSDK-BinaryPack-2.0.6.L1.zip \
- && unzip RTSDK-BinaryPack-2.0.6.L1.zip \
+ && wget --no-check-certificate https://github.com/Refinitiv/Real-Time-SDK/releases/download/Real-Time-SDK-2.0.8.L1/RTSDK-BinaryPack-2.0.8.L1.zip \
+ && unzip RTSDK-BinaryPack-2.0.8.L1.zip \
  && cd Java \
  && ./gradlew jar
 WORKDIR /opt/refinitiv/Real-Time-SDK/Java
