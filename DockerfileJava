@@ -16,7 +16,7 @@ RUN yum -y install java-11-openjdk git.x86_64 unzip wget\
  && cd Java \
  && gradle --version \
  && echo "Run gradlew" \
- && ./gradle jar
+ && gradle jar
 WORKDIR /opt/refinitiv/Real-Time-SDK/Java
 ENV JAVA_HOME=/usr
 CMD /bin/sh
