@@ -9,7 +9,7 @@ RUN yum -y install java-11-openjdk git.x86_64 unzip wget\
  && git clone --recursive https://github.com/refinitiv/Real-Time-SDK.git \
  && wget --no-check-certificate https://services.gradle.org/distributions/gradle-7.3.3-bin.zip \
  && unzip gradle-7.3.3-bin.zip \
- && export PATH=/opt/refinitiv/gradle-7.3.3-bin/gradle-7.3.3/bin:$PATH \
+ && export PATH=/opt/refinitiv/gradle-7.3.3/bin:$PATH \
  && cd Real-Time-SDK \
  && wget --no-check-certificate https://github.com/Refinitiv/Real-Time-SDK/releases/download/Real-Time-SDK-2.1.1.L1/RTSDK-BinaryPack-2.1.1.L1.zip \
  && unzip RTSDK-BinaryPack-2.1.1.L1.zip \
