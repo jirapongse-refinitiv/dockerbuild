@@ -14,7 +14,7 @@ RUN yum -y install java-11-openjdk git.x86_64 unzip wget\
  && wget --no-check-certificate https://github.com/Refinitiv/Real-Time-SDK/releases/download/Real-Time-SDK-2.1.1.L1/RTSDK-BinaryPack-2.1.1.L1.zip \
  && unzip RTSDK-BinaryPack-2.1.1.L1.zip \
  && cd Java \
- && gradle --version
+ && gradle --version \
  && echo "Run gradlew" \
  && ./gradlew jar
 WORKDIR /opt/refinitiv/Real-Time-SDK/Java
