@@ -1,0 +1,23 @@
+FROM oraclelinux:7
+LABEL maintainer="Refinitiv Developer Advocate"
+RUN yum -y install python3
+RUN yum -y install gcc-c++.x86_64 git.x86_64 ksh redhat-lsb-core.x86_64 openssl-devel wget.x86_64 \
+ && yum clean all \
+ && mkdir -p /opt/refinitiv \
+ && cd /opt/refinitiv \
+ && git config --global http.sslVerify false \
+ && git clone --recursive https://github.com/Refinitiv/Real-Time-SDK \
+ && wget https://cmake.org/files/v3.12/cmake-3.12.4-Linux-x86_64.tar.gz --no-check-certificate \
+ && wget https://download.gnome.org/sources/libxml2/2.10/libxml2-2.10.3.tar.xz --no-check-certificate\
+ && tar -xvf cmake-3.12.4-Linux-x86_64.tar.gz \
+ && cd Real-Time-SDK \
+ && mkdir rtsdk \
+ && export PATH=/opt/refinitiv/cmake-3.12.4-Linux-x86_64/bin:$PATH \
+ && cd rtsdk \
+ && mkdir -p external/dlcache \
+ && cp /opt/refinitiv/libxml2-2.10.3.tar.xz external/dlcache \
+ && cmake ../ -DBUILD_UNIT_TESTS=OFF \
+ && make 
+ENV PATH="/opt/refinitiv/cmake-3.12.4-Linux-x86_64/bin:$PATH"
+WORKDIR /opt/refinitiv/Real-Time-SDK/Cpp-C
+CMD /bin/sh
