@@ -18,7 +18,7 @@ RUN yum -y install java-11-openjdk git.x86_64 unzip wget\
  && unzip RTSDK-BinaryPack-2.1.1.L1.zip \
  && cd Java \
  && sed -i 's/https\\:\/\/services.gradle.org\/distributions\/gradle-7.3.3-bin.zip/gradle-7.3.3-bin.zip/' gradle/wrapper/gradle-wrapper.properties \
- && cp /opt/refinitiv/gradle-7.3.3-bin.zip \
+ && cp /opt/refinitiv/gradle-7.3.3-bin.zip gradle/wrapper/ \
  && cat gradle/wrapper/gradle-wrapper.properties \
  && echo "Run gradlew" \ 
  && ./gradlew jar
