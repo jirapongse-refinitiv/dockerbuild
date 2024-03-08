@@ -1,4 +1,4 @@
-FROM oraclelinux:7
+FROM oraclelinux:8
 LABEL maintainer="LSEG Developer Relations"
 RUN yum -y install dotnet-sdk-6.0 git.x86_64 \
  && yum clean all \
