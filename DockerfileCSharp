@@ -2,7 +2,7 @@ FROM oraclelinux:7
 LABEL maintainer="LSEG Developer Relations"
 RUN yum -y install dotnet-sdk-6.0 git.x86_64 \
  && yum clean all \
- && mkidr -p /opt/lseg \
+ && mkdir -p /opt/lseg \
  && cd /opt/lseg \
  && git config --global http.sslVerify false \
  && git clone --recursive https://github.com/Refinitiv/Real-Time-SDK \
