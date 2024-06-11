@@ -7,5 +7,9 @@ docker image tag refinitivrealtime/realtimesdk_java:latest refinitivapis/realtim
 docker build -t refinitivrealtime/websocket_api https://github.com/jirapongse-refinitiv/dockerbuild_websocket/raw/master/Dockerfile
 docker image tag refinitivrealtime/websocket_api:latest refinitivapis/websocket_api:latest
 
+
+docker build -t refinitivapis/realtimesdk_csharp https://github.com/jirapongse-refinitiv/dockerbuild/raw/master/DockerfileCSharp
+docker image tag refinitivrealtime/websocket_api:latest refinitivapis/websocket_api:latest
+
 docker login -u <username> -p <password>
 docker push refinitivapis/realtimesdk_c
