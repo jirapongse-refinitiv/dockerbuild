@@ -6,7 +6,7 @@ RUN yum -y install java-11-openjdk git.x86_64 unzip wget\
  && cd /opt/lseg \
  && export JAVA_HOME=/usr \
  && git config --global http.sslVerify false \
- && git clone --recursive https://github.com/refinitiv/Real-Time-SDK.git \
+ && git clone --recursive https://github.com/Refinitiv/Real-Time-SDK \
  && wget --no-check-certificate https://download2.gluonhq.com/openjfx/17.0.7/openjfx-17.0.7_linux-x64_bin-sdk.zip \
  && wget --no-check-certificate https://services.gradle.org/distributions/gradle-7.3.3-bin.zip \
  && unzip openjfx-17.0.7_linux-x64_bin-sdk.zip \
